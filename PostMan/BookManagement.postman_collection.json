@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "e4a52545-d5f3-41b9-ad53-7eb582d2c17f",
+		"name": "BookManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33006143"
+	},
+	"item": [
+		{
+			"name": "/book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "managepwd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "manageuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Pedro Paramo\",\r\n  \"author\": \"Juan Rulfo\",\r\n  \"isbn\": \"0105961728\",\r\n  \"quantity\":20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/management/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"management",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/book/{isbn}",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "managepwd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "manageuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/management/book/123456789012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"management",
+						"book",
+						"123456789012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/book/{isbn}",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "managepwd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "manageuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/management/book/123456789012",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"management",
+						"book",
+						"123456789012"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
